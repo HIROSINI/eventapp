@@ -1,0 +1,120 @@
+.back
+{
+    background-image: linear-gradient(to left,rgb(49, 112, 220),purple);
+    background-size: 100vh;
+}
+.img
+{
+    width: 700px;
+    height: 660px;
+    margin-left: 100px;
+    margin-top: -150px;
+}
+.wel
+{
+    text-decoration: underline;
+    font-style: italic;
+    color: whitesmoke;
+    margin-left: 970px;
+    margin-top: -520px;
+}
+.log
+{
+    text-decoration: underline;
+    font-style: italic;
+    color: whitesmoke;
+    margin-left: 1020px;
+    margin-top: 30px;
+    
+}
+.iform
+{
+    color: whitesmoke;
+    margin-left: 470px;
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+.all
+{
+    margin: 70px;
+    border: 3px solid black;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-image: linear-gradient(to right,rgb(49, 112, 220),purple);
+    box-shadow: 10px 15px black;
+    border-radius: 5px;
+}
+.p1
+{
+    color: whitesmoke;
+    font-size: 20px;
+    margin-left: 850px;
+    margin-top: 20px; 
+}
+.input input
+{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid wheat;
+    color: lightsteelblue;
+    font-size: 20px;
+}
+.logbutton
+{
+    margin-left: 75px;
+    font-size: 17px;
+    margin-top: 30px; 
+    background-color: lightgoldenrodyellow;
+    padding: 8px;
+    width: 100px;
+    border-radius: 10px;
+}
+.button1
+{
+    height: 40px;
+    font-size: 17px;
+    margin-left: 1020px;
+    margin-top: 10px;
+    font-size: 17px;
+    background-color: lightgoldenrodyellow;
+    padding: 8px;
+    width: 100px;
+    border-radius: 10px;
+}
+button:hover
+{
+    background-color: aquamarine;
+}
+.input
+{
+    padding-top: 20px;
+}
+.input-field
+{
+    height: 30px;
+    width: 300px;
+}
+.ido 
+{
+    font-weight: 600;
+    font-style: italic;
+    padding-top: 30px;
+    padding-left: 750px;
+    font-size: 45px;
+    color: yellow;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}  
+@keyframes glow 
+{
+    from 
+    {
+      text-shadow: 0 0 10px #e9d692, 0 0 20px #fff, 0 0 30px #c5cb56, 0 0 40px #c5cb56, 0 0 50px #c5cb56, 0 0 60px #c5cb56, 0 0 70px #c5cb56;
+    }
+    to 
+    {
+      text-shadow: 0 0 20px #e9d692, 0 0 30px #d8daaf, 0 0 40px #d8daaf, 0 0 50px #d8daaf, 0 0 60px #d8daaf, 0 0 70px #d8daaf, 0 0 80px #d8daaf;
+    }
+}

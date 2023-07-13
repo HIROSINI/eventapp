@@ -1,0 +1,120 @@
+.signback
+{
+    background-image: linear-gradient(to left,rgb(49, 112, 220),purple);
+    background-size: 100vh;
+}
+.img1
+{
+    width: 730px;
+    height: 750px;
+    margin-left: 100px;
+    margin-top: -120px;
+}
+.wel1
+{
+    text-decoration: underline;
+    font-style: italic;
+    color: whitesmoke;
+    margin-left: 1020px;
+    margin-top: -640px;
+}
+.sign1
+{
+    text-decoration: underline;
+    font-style: italic;
+    color: whitesmoke;
+    margin-left: 1030px;
+    margin-top: 30px;
+    
+}
+.error
+{
+    font-size: 15px;
+    color: red;
+}
+.iform1
+{
+    color: whitesmoke;
+    margin-left: 940px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.signall
+{   
+    margin: 70px;
+    border: 3px solid black;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-image: linear-gradient(to right,rgb(49, 112, 220),purple);
+    box-shadow: 10px 15px black;
+    border-radius: 5px;
+}
+.p2
+{
+    color: whitesmoke;
+    font-size: 20px;
+    margin-left: -80px;
+    margin-top: 20px; 
+}
+.signbutton
+{
+    margin-left: 90px;
+    font-size: 17px;
+    margin-top: 20px; 
+    background-color: lightgoldenrodyellow;
+    padding: 8px;
+    width: 100px;
+    border-radius: 10px;
+}
+.button2
+{
+    height: 40px;
+    font-size: 17px;
+    margin-left: 1095px;
+    margin-top: 10px;
+    font-size: 17px;
+    background-color: lightgoldenrodyellow;
+    padding: 8px;
+    width: 100px;
+    border-radius: 10px;
+}
+.input1 input
+{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid wheat;
+    color: lightsteelblue;
+    font-size: 20px;
+}
+.input-field1
+{
+    width: 300px;
+}
+.check
+{
+    height: 20px;
+    width: 20px;
+}
+.ido1
+{
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 10px;
+    padding-left: 790px;
+    font-size: 45px;
+    color: yellow;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}  
+@keyframes glow 
+{
+    from 
+    {
+      text-shadow: 0 0 10px #e9d692, 0 0 20px #fff, 0 0 30px #c5cb56, 0 0 40px #c5cb56, 0 0 50px #c5cb56, 0 0 60px #c5cb56, 0 0 70px #c5cb56;
+    }
+    to 
+    {
+      text-shadow: 0 0 20px #e9d692, 0 0 30px #d8daaf, 0 0 40px #d8daaf, 0 0 50px #d8daaf, 0 0 60px #d8daaf, 0 0 70px #d8daaf, 0 0 80px #d8daaf;
+    }
+}
