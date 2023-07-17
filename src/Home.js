@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
 import './Home.css'
 import React from 'react'
+import { useSelector } from 'react-redux/es/hooks/useSelector'
+import { selectUser } from './Redux/userSlice';
+
 
 export default function Home() 
 {
+  const user=useSelector(selectUser);
   return (
     <>
         <nav class="nav0">
@@ -14,16 +18,16 @@ export default function Home()
             <li className='nav1'><Link to="/Events">Events Invitation</Link></li>
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
+            <p className="helloo">Hello {user} !</p>
           </ul>
         </nav>
           <div class="dropdown">
           <button class="dropbtn">☰ Menu</button>
           <div class="dropdown-content">
             <Link to="/Organizer"><a href="#">Create Events</a></Link>
-            <a href="#">Select Events</a>
-            <a href="#">Modify Events</a>
-            <a href="#">Delete Events</a>
-            <a href="#">Add to Calender</a>
+            <Link to="/Attendee"><a href="#">Select Events</a></Link>
+            <Link to="/Manage"><a href="#">Manage Events</a></Link>
+            <Link to="/Addcal"><a href="#">Add to Calender</a></Link>
           </div>
           </div>
           <div class="scroll-container">          
@@ -68,11 +72,11 @@ export default function Home()
           <p className="foot4">Contact Us</p>
           <p class="foot5">Support  </p>
           <p class="foot6">FAQs </p>
-          <i class="fa fa-envelope"/>
-          <i class="fa fa-facebook"/>
-          <i class="fa fa-twitter"/>
-          <i class="fa fa-linkedin"/>
-          <i class="fa fa-instagram"/>
+          <div className="icon1"><i  class="fa fa-envelope"/></div>
+          <div className="icon2"><i class="fa fa-facebook"/></div>
+          <div className="icon3"><i class="fa fa-twitter"/></div>
+          <div className="icon4"><i class="fa fa-linkedin"/></div>
+          <div className="icon5"><i class="fa fa-instagram"/></div>
           </div>
           </>
   )

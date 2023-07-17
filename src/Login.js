@@ -1,20 +1,27 @@
 import { useState } from "react";
 import "./Login.css"
 import {Link} from "react-router-dom";
+import {useDispatch} from 'react-redux'
+import { login } from "./Redux/userSlice";
+import { useNavigate } from "react-router-dom";
 
 import React from 'react'
 
 function Login() {
   const[mail,setMail] = useState("");
   const[password,setPassword] = useState("");
+  const[name,setName] = useState("");
+  const dispatch=useDispatch();
+  const navigate=useNavigate();
 
   const handleChange = (e) => 
   {
     e.preventDefault()
-    if(mail.length !== 0 && (/^\S+@\S+\.\S+$/).test(mail) && (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=]).{8,}$/).test(password) && password.length >= 8)
+    if(mail.length !== 0 && (/^\S+@\S+\.\S+$/).test(mail) && (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=]).{8,}$/).test(password) && password.length >= 8 && name.length !==0)
     {
-        window.location.href = "./Home";
+        navigate("/Home");
     }
+    dispatch(login({user:name}));
   }
 
   return (
@@ -27,6 +34,11 @@ function Login() {
     <h2 className='log'>Login</h2>
     <div className="iform">
     <form action="index.html" autocomplete="off" class="iform" action="">
+    <div class="input">
+            <label>Please enter your Name:</label>
+            <input type="text"  required onChange = {e => setName(e.target.value)}/>
+            <div className='error'>{name.length===0?"Please enter your valid Name":""}</div><br></br>
+        </div>
     <div class="input">
           <label>Please enter your Email-ID:</label>
               <input type="email" required onChange = {e => setMail(e.target.value)}/>

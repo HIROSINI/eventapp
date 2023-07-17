@@ -1,0 +1,22 @@
+.newbox 
+{
+    background-color: transparent;
+    width: 300px;
+    border: 15px solid lightblue;
+    padding: 50px;
+    margin-left: 540px;
+    background-color: aliceblue;
+  }
+  .updbutton
+  {
+    margin-left: 20px;
+    height:30px;
+  }
+  .Manimg
+  {
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 650px;
+    width: 1460px;
+    margin-bottom: 200px;
+  }

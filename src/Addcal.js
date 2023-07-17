@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './Attendee.css'
-export class Attendee extends Component {
+export default class Addcal extends Component {
   render() {
     return (
       <>
@@ -9,7 +8,7 @@ export class Attendee extends Component {
           <ul>
             <p className="idoHome">iDoEventZ</p>
             <li className='nav1'><Link to="/">Log Out</Link></li>
-            <li className='nav1'><Link to="/Home">Profile</Link></li>
+            <li className='nav1'><Link to="/Profile">Profile</Link></li>
             <li className='nav1'><Link to="/Events">Events Invitation</Link></li>
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
@@ -24,6 +23,7 @@ export class Attendee extends Component {
           <Link to="/Addcal"><a href="#">Add to Calender</a></Link>
           </div>
           </div>
+          <a href="https://calendar.google.com/calendar/r/eventedit">Click Here!</a>
           <div className='footer'>
           <p className="foot1">Copyright © 2023 iDoEventZ</p>
           <p class="foot2"> Terms and Conditions  </p>
@@ -41,5 +41,3 @@ export class Attendee extends Component {
     )
   }
 }
-
-export default Attendee

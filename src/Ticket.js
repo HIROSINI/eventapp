@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './Attendee.css'
-export class Attendee extends Component {
+import './Organizer.css'
+export class Ticket extends Component {
   render() {
     return (
       <>
@@ -24,6 +24,27 @@ export class Attendee extends Component {
           <Link to="/Addcal"><a href="#">Add to Calender</a></Link>
           </div>
           </div>
+          <div className='orgform'>
+            <p className='kind'>Kindly Provide the Details Regarding the Event:</p>
+            <form className='oform'>
+            <label>Organizer:</label><br></br>
+            <input type="text" id="fname" placeholder="Organizer Name"/><br></br>
+            <div style={{float:"right",marginTop:"-67px"}}><label>Event name:</label><br></br>
+            <input type="text" id="fname" placeholder="Event Name"/></div><br></br>
+            <label>Timings [ From ]:</label><br></br>
+            <input type="time" id="fname"/><br></br>
+            <div style={{float:"right",marginTop:"-67px"}}><label>Timings [ To ]:</label><br></br>
+            <input type="time" id="fname"/></div><br></br>
+            <label>Event Venue:</label><br></br>
+            <textarea id="lname" placeholder="Event Venue" rows="5" cols="50"/><br></br>
+            <label>Event Description:</label><br></br>
+            <textarea id="lname" placeholder="Description" rows="12" cols="50"/><br></br>
+            <label>Event Agenda:</label><br></br>
+            <textarea id="lname" placeholder="Agenda" rows="15" cols="50"/>
+          </form>
+          </div>
+          <div className='eveimg'><img src="https://static.vecteezy.com/system/resources/previews/005/190/848/original/event-management-word-concepts-banner-scheduling-and-organization-event-agency-presentation-website-isolated-lettering-typography-idea-with-linear-icons-outline-illustration-vector.jpg" alt="pic" className='desimg'></img></div>
+          <button type='Submit' className='orgsub'>Submit</button>
           <div className='footer'>
           <p className="foot1">Copyright © 2023 iDoEventZ</p>
           <p class="foot2"> Terms and Conditions  </p>
@@ -42,4 +63,4 @@ export class Attendee extends Component {
   }
 }
 
-export default Attendee
+export default Ticket

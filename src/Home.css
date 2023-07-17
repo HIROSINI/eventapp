@@ -144,6 +144,15 @@ li
     float: right;
     font-weight: 800;
 }
+.helloo
+{
+    margin-left: 500px;
+    margin-top: -60px;
+    font-weight: 800;
+    color: darkred;
+    font-size: 22px;
+    font-family: cursive;
+}
 .scroll-container 
 {
     margin-left: 50px;
@@ -181,7 +190,7 @@ li :hover
 {
     font-weight: 600;
     font-style: italic;
-    margin-left: -1000px;
+    margin-left: -950px;
     font-size: 30px;
     padding-top: 5px;
     color: red;
@@ -232,6 +241,31 @@ li :hover
     height: 52px;
     font-weight: 700;
 }
+.icon1
+{
+    margin-left: 1035px;
+    margin-top: -47px;
+}
+.icon2
+{
+    margin-left: 1054px;
+    margin-top: -21px;
+}
+.icon3
+{
+    margin-left: 1067px;
+    margin-top: -22px;
+}
+.icon4
+{
+    margin-left: 1084px;
+    margin-top: -22px;
+}
+.icon5
+{
+    margin-left: 1103px;
+    margin-top: -22px;
+}
 .dropbtn 
 {
     background-color: yellow;
@@ -240,7 +274,7 @@ li :hover
     font-size: 16px;
     border: none;
     cursor: pointer;
-    width: 160px;
+    width: 180px;
     height: 60px;
 }
 .dropdown 
@@ -254,7 +288,7 @@ li :hover
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .dropdown-content a {

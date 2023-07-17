@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Signup.css"
-import { Link } from "react-router-dom";
+import {useDispatch} from 'react-redux'
+import { login } from "./Redux/userSlice";
+import { useNavigate } from "react-router-dom";
 
 import React from 'react'
 
@@ -10,14 +12,16 @@ function Signup()
   const[mail,setMail] = useState("");
   const[password,setPassword] = useState("");
   const[cont,setCont] = useState("");
-  
+  const dispatch=useDispatch();
+  const navigate=useNavigate();
   const handleChange = (e) => 
   {
       e.preventDefault()
       if(mail.length !== 0 && (/^\S+@\S+\.\S+$/).test(mail) && (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=]).{8,}$/).test(password) && password.length >= 8 && name.length !==0 && cont.length>9)
       {
-          window.location.href = "./Home";
+          navigate("/Home");
       }
+      dispatch(login({user:name}));
   }
   return (
     <>
@@ -28,7 +32,7 @@ function Signup()
     <div className="all1">
     <h2 className='wel1'>Welcome</h2>
     <h2 className='sign1'>Sign up</h2>
-    <form action="index.html" autocomplete="off" class="iform1" action="">
+    <form action="index.html" autocomplete="off" class="iform1" >
         <div class="input1">
             <label>Please enter your Name:</label>
             <input type="text"  required onChange = {e => setName(e.target.value)}/>
@@ -50,7 +54,7 @@ function Signup()
               <input type="tel" minLength="10" pattern="[0-9]{10}"  required onChange = {e => setCont(e.target.value)}/>
               <div className='error'>{cont.length<10?"Please enter your valid Contact Number":""}</div><br></br>
         </div><br></br>
-        <Link to="/Home"><button onClick={handleChange} class="signbutton">Sign Up</button></Link>
+        <button onClick={handleChange} class="signbutton">Sign Up</button>
     </form>
     </div>
     </div>
