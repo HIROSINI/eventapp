@@ -6,17 +6,22 @@
     padding: 50px;
     margin-left: 540px;
     background-color: aliceblue;
+    margin-top: 100px;
+    position: relative;
+
   }
   .updbutton
   {
     margin-left: 20px;
-    height:30px;
   }
   .Manimg
   {
     margin-left: 20px;
-    margin-top: 20px;
-    height: 650px;
+    margin-top: -200px;
+    height: 600px;
     width: 1460px;
-    margin-bottom: 200px;
+  }
+  button
+  {
+    padding: 10px;
   }

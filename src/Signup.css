@@ -5,9 +5,9 @@
 }
 .img1
 {
-    width: 730px;
-    height: 750px;
-    margin-left: 100px;
+    width: 770px;
+    height: 900px;
+    margin-left: 70px;
     margin-top: -120px;
 }
 .wel1
@@ -16,7 +16,7 @@
     font-style: italic;
     color: whitesmoke;
     margin-left: 1020px;
-    margin-top: -640px;
+    margin-top: -770px;
 }
 .sign1
 {
@@ -60,7 +60,6 @@
 {
     margin-left: 90px;
     font-size: 17px;
-    margin-top: 20px; 
     background-color: lightgoldenrodyellow;
     padding: 8px;
     width: 100px;
@@ -107,6 +106,25 @@
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
 }  
+.p2
+{
+    color: whitesmoke;
+    font-size: 20px;
+    margin-left: 900px;
+    margin-top: 20px; 
+}
+.button2
+{
+    height: 40px;
+    font-size: 17px;
+    margin-left: 1030px;
+    margin-top: 10px;
+    font-size: 17px;
+    background-color: lightgoldenrodyellow;
+    padding: 8px;
+    width: 100px;
+    border-radius: 10px;
+}
 @keyframes glow 
 {
     from 

@@ -1,0 +1,49 @@
+*
+{
+    text-decoration: none;
+}
+.kind1
+{
+    color: darkblue;
+    font-weight: 700;
+    margin-left: 370px;
+    font-size: 17px;
+}
+#fname1
+{
+    height: 30px;
+    width: 300px;
+    background: rgb(164, 239, 252);
+    /* background: rgb(252, 221, 185); */
+    border-radius: 5px;
+    border: 2px solid lightblue;
+}
+.orgform1
+{
+    background-image: url('https://image.slidesdocs.com/responsive-images/background/movie-ticket-funny-projector-powerpoint-background_d13b1bf404__960_540.jpg');
+    height: 600px;
+    width: 1000px;
+    margin-left: 250px;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+
+}
+.oform1
+{
+    color: darkblue;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 600;
+    margin-left: 350px;
+    padding-top: 170px;
+}
+.orgsub1
+{
+    margin-top: 250px;
+    height: 40px;
+    width: 200px;
+    font-size: 17px;
+    background-color: wheat;
+    border-radius: 18px;
+    margin-left: 50px;
+}

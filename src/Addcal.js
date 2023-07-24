@@ -19,7 +19,7 @@ export default class Addcal extends Component {
           <div class="dropdown-content">
           <Link to="/Organizer"><a href="#">Create Events</a></Link>
           <Link to="/Attendee"><a href="#">Select Events</a></Link>
-          <Link to="/Manage"><a href="#">Manage Events</a></Link>
+          {/* <Link to="/Manage"><a href="#">Manage Events</a></Link> */}
           <Link to="/Addcal"><a href="#">Add to Calender</a></Link>
           </div>
           </div>

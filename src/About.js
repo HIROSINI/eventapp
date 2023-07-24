@@ -9,8 +9,8 @@ export class About extends Component {
           <ul>
             <p className="idoHome">iDoEventZ</p>
             <li className='nav1'><Link to="/">Log Out</Link></li>
-            <li className='nav1'><Link to="/Home">Profile</Link></li>
-            <li className='nav1'><Link to="/Events">Events Invitation</Link></li>
+            <li className='nav1'><Link to="/Profile">Profile</Link></li>
+            <li className='nav1'><Link to="/Events">Chat With Us</Link></li>
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
           </ul>
@@ -21,7 +21,7 @@ export class About extends Component {
           <Link to="/Organizer"><a href="#">Create Events</a></Link>
           <Link to="/Attendee"><a href="#">Select Events</a></Link>
           <Link to="/Manage"><a href="#">Manage Events</a></Link>
-          <Link to="/Addcal"><a href="#">Add to Calender</a></Link>
+          <a href="https://calendar.google.com/calendar/r/eventedit">Add to Calender</a>
           </div>
           </div>
           <div className='abo'>
@@ -42,11 +42,11 @@ export class About extends Component {
           <p className="foot4">Contact Us</p>
           <p class="foot5">Support  </p>
           <p class="foot6">FAQs </p>
-          <div className="icon1"><i  class="fa fa-envelope"/></div>
-          <div className="icon2"><i class="fa fa-facebook"/></div>
-          <div className="icon3"><i class="fa fa-twitter"/></div>
-          <div className="icon4"><i class="fa fa-linkedin"/></div>
-          <div className="icon5"><i class="fa fa-instagram"/></div>
+          <div className="icon1"><a href="https://mail.google.com"  class="fa fa-envelope"/></div>
+          <div className="icon2"><a href="https://www.facebook.com" class="fa fa-facebook"/></div>
+          <div className="icon3"><a href="https://www.twitter.com" class="fa fa-twitter"/></div>
+          <div className="icon4"><a href="https://www.linkedin.com" class="fa fa-linkedin"/></div>
+          <div className="icon5"><a href="https://www.instagram.com" class="fa fa-instagram"/></div>
           </div>
       </>
     )

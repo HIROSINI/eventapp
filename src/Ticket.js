@@ -1,16 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'
-import './Organizer.css'
-export class Ticket extends Component {
-  render() {
-    return (
-      <>
+import './Ticket.css'
+
+function Ticket() {
+  const location = useLocation();
+  const eventData = location?.state?.eventData;
+  const priceperperson = 100;
+
+  const [numTickets, setNumTickets] = useState(1);
+
+  const handleNumTicketsChange = (e) => {
+    const value = parseInt(e.target.value, 10);
+    setNumTickets(value);
+  };
+
+  const totalAmount = priceperperson * numTickets;
+
+  return (
+    <>
         <nav class="nav0">
           <ul>
             <p className="idoHome">iDoEventZ</p>
             <li className='nav1'><Link to="/">Log Out</Link></li>
-            <li className='nav1'><Link to="/Home">Profile</Link></li>
-            <li className='nav1'><Link to="/Events">Events Invitation</Link></li>
+            <li className='nav1'><Link to="/Profile">Profile</Link></li>
+            <li className='nav1'><Link to="/Events">Chat With Us</Link></li>
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
           </ul>
@@ -21,30 +36,29 @@ export class Ticket extends Component {
           <Link to="/Organizer"><a href="#">Create Events</a></Link>
           <Link to="/Attendee"><a href="#">Select Events</a></Link>
           <Link to="/Manage"><a href="#">Manage Events</a></Link>
-          <Link to="/Addcal"><a href="#">Add to Calender</a></Link>
+          <a href="https://calendar.google.com/calendar/r/eventedit">Add to Calender</a>
           </div>
           </div>
-          <div className='orgform'>
-            <p className='kind'>Kindly Provide the Details Regarding the Event:</p>
-            <form className='oform'>
-            <label>Organizer:</label><br></br>
-            <input type="text" id="fname" placeholder="Organizer Name"/><br></br>
-            <div style={{float:"right",marginTop:"-67px"}}><label>Event name:</label><br></br>
-            <input type="text" id="fname" placeholder="Event Name"/></div><br></br>
-            <label>Timings [ From ]:</label><br></br>
-            <input type="time" id="fname"/><br></br>
-            <div style={{float:"right",marginTop:"-67px"}}><label>Timings [ To ]:</label><br></br>
-            <input type="time" id="fname"/></div><br></br>
-            <label>Event Venue:</label><br></br>
-            <textarea id="lname" placeholder="Event Venue" rows="5" cols="50"/><br></br>
-            <label>Event Description:</label><br></br>
-            <textarea id="lname" placeholder="Description" rows="12" cols="50"/><br></br>
-            <label>Event Agenda:</label><br></br>
-            <textarea id="lname" placeholder="Agenda" rows="15" cols="50"/>
+            <p className='kind1'>Kindly Provide the Details to Book Tickets:</p>
+          <div className='orgform1'>
+            <form className='oform1'>
+            {/* <h2>Event Details</h2> */}
+
+      <h2>Ticket Purchase</h2>
+      <label htmlFor="numTickets">Number of Tickets:</label>
+      <input
+        type="number"
+        id="numTickets"
+        value={numTickets}
+        min="1"
+        onChange={handleNumTicketsChange}
+      />
+
+      <h3>Total Amount to Pay: ${totalAmount}</h3>
+            <button type='Submit' className='orgsub1'>Make Payment</button>
           </form>
           </div>
-          <div className='eveimg'><img src="https://static.vecteezy.com/system/resources/previews/005/190/848/original/event-management-word-concepts-banner-scheduling-and-organization-event-agency-presentation-website-isolated-lettering-typography-idea-with-linear-icons-outline-illustration-vector.jpg" alt="pic" className='desimg'></img></div>
-          <button type='Submit' className='orgsub'>Submit</button>
+          {/* <div className='eveimg'><img src="https://image.slidesdocs.com/responsive-images/background/movie-ticket-funny-projector-powerpoint-background_d13b1bf404__960_540.jpg" alt="pic" className='desimg'></img></div> */}
           <div className='footer'>
           <p className="foot1">Copyright © 2023 iDoEventZ</p>
           <p class="foot2"> Terms and Conditions  </p>
@@ -59,8 +73,8 @@ export class Ticket extends Component {
           <div className="icon5"><i class="fa fa-instagram"/></div>
           </div>
       </>
-    )
-  }
+  )
 }
+
 
 export default Ticket

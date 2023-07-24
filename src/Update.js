@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link  } from 'react-router-dom'
-import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import './Organizer.css'
 
-function Organizer() {
+function Update() {
 
   const[id,setId]=useState("");
   const[organizer,setOrganizer] = useState("");
@@ -25,8 +24,8 @@ function Organizer() {
     e.preventDefault();
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.post(
-        'http://127.0.0.1:8181/save/eventdetails',
+      const response = await axios.put(
+        'http://127.0.0.1:8181/update/eventdetails',
         {
           eventid: id,
           organizername: organizer,
@@ -49,7 +48,7 @@ function Organizer() {
         }
       );
       
-      alert('Form Submitted Successfully!');
+      alert('Form Updated Successfully!');
       
     } catch (error) {
       console.error('Form submission failed:', error);
@@ -125,7 +124,8 @@ return (
           </form>
           </div>
           <div className='eveimg'><img src="https://static.vecteezy.com/system/resources/previews/005/190/848/original/event-management-word-concepts-banner-scheduling-and-organization-event-agency-presentation-website-isolated-lettering-typography-idea-with-linear-icons-outline-illustration-vector.jpg" alt="pic" className='desimg'></img></div>
-          <button type='Submit' className='orgsub' onClick={handleChange}>Submit</button>
+          <button type='Submit' className='orgsub' onClick={handleChange}>Update</button>
+
           <div className='footer'>
           <p className="foot1">Copyright © 2023 iDoEventZ</p>
           <p class="foot2"> Terms and Conditions  </p>
@@ -143,4 +143,4 @@ return (
   )
   }
 
-export default Organizer
+export default Update

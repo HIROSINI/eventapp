@@ -10,6 +10,12 @@ import Attendee from './Attendee';
 import Organizer from './Organizer';
 import Manage from './Manage';
 import Addcal from './Addcal';
+import Ticket from './Ticket';
+import Privacy from './Privacy';
+import Terms from './Terms';
+import Faq from './Faq';
+import Update from './Update';
+import Delete from './Delete';
 // import {Calender} from './Calendar/Calender'
 
 function App() {
@@ -29,6 +35,15 @@ function App() {
         <Route path="/Manage" element={<Manage/>}></Route>
         {/* <Route path="/Calender" element={<Calender/>}></Route> */}
         <Route path="/Addcal" element={<Addcal/>}></Route>
+        <Route path="/Ticket" element={<Ticket/>}></Route>
+        <Route path="/Privacy" element={<Privacy/>}></Route>
+        <Route path="/Terms" element={<Terms/>}></Route>
+        <Route path="/faq" element={<Faq/>}></Route>
+        <Route path="/Update" element={<Update/>}></Route>
+        <Route path="/Delete" element={<Delete/>}></Route>
+
+
+
     </Routes>
   </Router>
     </div>

@@ -15,7 +15,7 @@ export default function Home()
             <p className="idoHome">iDoEventZ</p>
             <li className='nav1'><Link to="/">Log Out</Link></li>
             <li className='nav1'><Link to="/Profile">Profile</Link></li>
-            <li className='nav1'><Link to="/Events">Events Invitation</Link></li>
+            <li className='nav1'><Link to="/Events">Chat With Us</Link></li>
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
             <p className="helloo">Hello {user} !</p>
@@ -27,7 +27,7 @@ export default function Home()
             <Link to="/Organizer"><a href="#">Create Events</a></Link>
             <Link to="/Attendee"><a href="#">Select Events</a></Link>
             <Link to="/Manage"><a href="#">Manage Events</a></Link>
-            <Link to="/Addcal"><a href="#">Add to Calender</a></Link>
+            <a href="https://calendar.google.com/calendar/r/eventedit">Add to Calender</a>
           </div>
           </div>
           <div class="scroll-container">          
@@ -47,7 +47,7 @@ export default function Home()
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1J2o_BzWEMs3jWSxFnhUJnXc2zegh0PpasBbeXKUVIoKwlKE4DmPO6z2jDpY61dUb5ls&usqp=CAU"/>
             <div class="organizer">Organizer</div>
           </div></Link>
-          <Link to="/Attendee"><div class="att">
+          <Link to="/Ticket"><div class="att">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPpOjG3htIajN8L_PEzuuipj818zupMWz_WM7BiNv1jFGDEhXtFNTayOpqovJB8vT1c04&usqp=CAU"/>
             <div class="attendee">Attendee</div>
           </div></Link>
@@ -67,16 +67,16 @@ export default function Home()
           </div>
           <div className='footer'>
           <p className="foot1">Copyright © 2023 iDoEventZ</p>
-          <p class="foot2"> Terms and Conditions  </p>
-          <p class="foot3">Privacy Policy  </p>
+          <Link to="/Terms"><p class="foot2"> Terms and Conditions  </p></Link>
+          <Link to="/Privacy"><p class="foot3">Privacy Policy  </p></Link>
           <p className="foot4">Contact Us</p>
           <p class="foot5">Support  </p>
-          <p class="foot6">FAQs </p>
-          <div className="icon1"><i  class="fa fa-envelope"/></div>
-          <div className="icon2"><i class="fa fa-facebook"/></div>
-          <div className="icon3"><i class="fa fa-twitter"/></div>
-          <div className="icon4"><i class="fa fa-linkedin"/></div>
-          <div className="icon5"><i class="fa fa-instagram"/></div>
+          <Link to="/Faq"><p class="foot6">FAQs </p></Link>
+          <div className="icon1"><a href="https://mail.google.com"  class="fa fa-envelope"/></div>
+          <div className="icon2"><a href="https://www.facebook.com" class="fa fa-facebook"/></div>
+          <div className="icon3"><a href="https://www.twitter.com" class="fa fa-twitter"/></div>
+          <div className="icon4"><a href="https://www.linkedin.com" class="fa fa-linkedin"/></div>
+          <div className="icon5"><a href="https://www.instagram.com" class="fa fa-instagram"/></div>
           </div>
           </>
   )
