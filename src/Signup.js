@@ -2,14 +2,17 @@ import { useState } from "react";
 import "./Signup.css"
 import {useDispatch} from 'react-redux'
 import { login } from "./Redux/userSlice";
-import { Link , useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import Profile from "./Profile";
+
 
 
 import React from 'react'
 
 function Signup() 
 {
+  const[id,setId]=useState("");
   const[name,setName] = useState("");
   const[email,setMail] = useState("");
   const[password,setPassword] = useState("");
@@ -35,18 +38,26 @@ function Signup()
                  dispatch(login({ user: user.name }));
                 //  dispatch(mailin({ mail: user.mail }));
               
-               navigate('/Home');
+               navigate('/');
                setName('');
                setMail('');
                setPassword('');
                setCont('');
-               }
-         }
-             catch(error) {
-               console.error('Login failed:', error);
-             };
+               setId('');
+               let ucontact=contact;
+              localStorage.setItem('ucontact',ucontact);
+              let urole=response.data.role;
+              localStorage.setItem('urole',urole);
+              
+              <Profile user={user} />
+              console.log(urole)
             }
-            dispatch(login({user:name}));
+          }
+          catch(error) {
+            console.error('Login failed:', error);
+          };
+        }
+        dispatch(login({user:name}));
  }
 
 
@@ -63,12 +74,12 @@ function Signup()
     <form action="index.html" autocomplete="off" class="iform1">
 
     {/* <div class="input1">
-            <label>Please enter ID:</label><br></br>
-            <input type="text" value={id} required onChange = {e => setId(e.target.value)}/>
-            <div className='error'>{id.length===0?"Please enter your valid ID":""}
+            <label>Please enter your ID:</label>
+            <input type="number" value={id} min={1} required onChange = {e => setId(e.target.value)}/>
+            <div className='error'>{id.length===0?"Please enter your Id":""}
             </div><br></br>
-            </div><br></br> */}
-
+          
+        </div><br></br> */}
 
         <div class="input1">
             <label>Please enter your Name:</label>
@@ -103,6 +114,7 @@ function Signup()
     <p className="p2">Already have an Account? Click here to login.</p>
     <Link to="/"><button className="button2">Login</button></Link>
     </div>
+    {name && <Profile user={{ id, name, email, contact }} />}
     </>
   )
 }

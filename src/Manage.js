@@ -50,7 +50,7 @@ function Manage() {
             <p className="idoHome">iDoEventZ</p>
             <li className='nav1'><Link to="/">Log Out</Link></li>
             <li className='nav1'><Link to="/Profile">Profile</Link></li>
-            <li className='nav1'><Link to="/Events">Chat With Us</Link></li>
+            {/* <li className='nav1'><Link to="/Events">Chat With Us</Link></li> */}
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
           </ul>
@@ -62,17 +62,24 @@ function Manage() {
           <Link to="/Attendee"><a href="#">Select Events</a></Link>
           <Link to="/Manage"><a href="#">Manage Events</a></Link>
           <a href="https://calendar.google.com/calendar/r/eventedit">Add to Calender</a>
+          <Link to="/Feedback"><a href="">Feedback</a></Link>
           </div>
           </div>
-          <div className='mandiv'>
-          <div class="newbox">
-          {/* <div>Time: 6pm to 12pm</div>
-          <div>Venue: Codissia Ground</div>
-        <br></br> */}
-          <Link to="/Update"><button class="updbutton" type='button'>Update</button></Link>
-          <button type="button" className="orgdelete" onClick={handleDeleteEvent} style={{marginLeft:"70px"}}>Delete Event</button>
-          </div>
-        <img src="https://png.pngtree.com/background/20210710/original/pngtree-creative-blue-light-stage-banner-background-picture-image_977106.jpg"  className="Manimg"></img></div>
+          <div className='mandivm'>
+        <div className='containerm'>
+          {/* Update Event Button with Image */}
+          <Link to="/Update">
+            <img src="https://www.mbatuts.com/wp-content/uploads/2019/11/Event-Planning-Business-in-plan.jpg" alt="Update Event" className="button-image" />
+            <button className="updbuttonm" type='button'>Update Event</button>
+          </Link>
+        </div>
+
+        <div className='containerm' style={{width:"600px"}}>
+          {/* Delete Event Button with Image */}
+          <img src="https://www.mbatuts.com/wp-content/uploads/2019/11/Event-Planning-Business-in-plan.jpg" alt="Delete Event" className="buttonimage1" />
+          <button className="orgdeletem" onClick={handleDeleteEvent}>Delete Event</button>
+        </div>
+      </div>
           <div className='footer'>
           <p className="foot1">Copyright © 2023 iDoEventZ</p>
           <p class="foot2"> Terms and Conditions  </p>

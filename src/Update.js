@@ -80,7 +80,7 @@ return (
             <p className="idoHome">iDoEventZ</p>
             <li className='nav1'><Link to="/">Log Out</Link></li>
             <li className='nav1'><Link to="/Profile">Profile</Link></li>
-            <li className='nav1'><Link to="/Events">Chat With Us</Link></li>
+            {/* <li className='nav1'><Link to="/Events">Chat With Us</Link></li> */}
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
           </ul>
@@ -92,6 +92,7 @@ return (
           <Link to="/Attendee"><a href="#">Select Events</a></Link>
           <Link to="/Manage"><a href="#">Manage Events</a></Link>
           <a href="https://calendar.google.com/calendar/r/eventedit">Add to Calender</a>
+          <Link to="/Feedback"><a href="">Feedback</a></Link>
           </div>
           </div>
           <div className='orgform'>

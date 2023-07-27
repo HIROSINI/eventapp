@@ -1,27 +1,91 @@
-.newbox 
+.newboxm
 {
     background-color: transparent;
-    width: 300px;
     border: 15px solid lightblue;
     padding: 50px;
     margin-left: 540px;
     background-color: aliceblue;
     margin-top: 100px;
-    position: relative;
 
   }
-  .updbutton
+  .updbuttonm
   {
     margin-left: 20px;
   }
-  .Manimg
+  
+  .containerm button
   {
-    margin-left: 20px;
-    margin-top: -200px;
-    height: 600px;
-    width: 1460px;
-  }
-  button
-  {
+    /* width: 200px; */
     padding: 10px;
+  }
+  
+  
+  .mandivm {
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin-top: 20px;
+  }
+  
+  .containerm {
+    background-color: rgb(107, 206, 239);
+    margin-left: 100px;
+    /* flex: 1; */
+    display: flex;
+    margin-top: 30px;
+    padding: 30px;
+    margin-bottom: 119px;
+    /* flex-direction: column; */
+    align-items: center; /* Center contents vertically */
+    width: 550px; /* Adjust the image size as needed */
+    height: 400px;
+  }
+  
+  .containerm img {
+    width: 500px; /* Adjust the image size as needed */
+    height: 300px;
+    /* border-radius: 50%; */
+    /* margin-bottom: 10px; Add spacing between image and button */
+  }
+  
+  .containerm button {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    width: 500px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .updbuttonm {
+    
+
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 600px;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .updbuttonm:hover {
+    background-color: #0056b3;
+  }
+  
+  .containerm buttonimage1
+  {
+        margin-top: 100px;
+        width: 600px;
+  }
+  .orgdeletem 
+  {
+    width: 400px;
+    margin-top: 400px;
+    margin-left: -500px;
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .orgdeletem:hover {
+    background-color: #c82333;
   }

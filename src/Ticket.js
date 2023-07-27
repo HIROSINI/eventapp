@@ -1,13 +1,16 @@
 import React from 'react'
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import './Ticket.css'
 
 function Ticket() {
+
+
   const location = useLocation();
-  const eventData = location?.state?.eventData;
-  const priceperperson = 100;
+  const queryParams = new URLSearchParams(location.search);
+  const receivedValue = queryParams.get('data1');
+  const receivedValue1 = queryParams.get('data2');
 
   const [numTickets, setNumTickets] = useState(1);
 
@@ -16,7 +19,7 @@ function Ticket() {
     setNumTickets(value);
   };
 
-  const totalAmount = priceperperson * numTickets;
+  const totalAmount = receivedValue * numTickets;
 
   return (
     <>
@@ -25,7 +28,7 @@ function Ticket() {
             <p className="idoHome">iDoEventZ</p>
             <li className='nav1'><Link to="/">Log Out</Link></li>
             <li className='nav1'><Link to="/Profile">Profile</Link></li>
-            <li className='nav1'><Link to="/Events">Chat With Us</Link></li>
+            {/* <li className='nav1'><Link to="/Events">Chat With Us</Link></li> */}
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
           </ul>
@@ -37,15 +40,17 @@ function Ticket() {
           <Link to="/Attendee"><a href="#">Select Events</a></Link>
           <Link to="/Manage"><a href="#">Manage Events</a></Link>
           <a href="https://calendar.google.com/calendar/r/eventedit">Add to Calender</a>
+          <Link to="/Feedback"><a href="">Feedback</a></Link>
           </div>
           </div>
             <p className='kind1'>Kindly Provide the Details to Book Tickets:</p>
           <div className='orgform1'>
             <form className='oform1'>
-            {/* <h2>Event Details</h2> */}
-
-      <h2>Ticket Purchase</h2>
-      <label htmlFor="numTickets">Number of Tickets:</label>
+            <h2 className='evdet'>Event Details</h2>
+          <p className='pt'>Event name: {receivedValue1} </p>
+        <p className='pt'>Price Per Person: $  {receivedValue} </p>
+      <h2 className='evdet'>Ticket Purchase</h2>
+      <label htmlFor="numTickets">Number of Tickets:</label><br></br>
       <input
         type="number"
         id="numTickets"

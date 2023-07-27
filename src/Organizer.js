@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link  } from 'react-router-dom'
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import './Organizer.css'
@@ -20,7 +20,7 @@ function Organizer() {
   const[capacity,setCapacity] = useState("");
   const[price,setPrice] = useState("");
   const [allDetails, setAllDetails] = useState([]);
-
+  
   const handleChange = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem('token');
@@ -47,13 +47,16 @@ function Organizer() {
             'cache-control': 'no-cache',
           },
         }
-      );
-      
-      alert('Form Submitted Successfully!');
-      
-    } catch (error) {
-      console.error('Form submission failed:', error);
-    }
+        );
+        
+        // let tprice=price;
+        // console.log(tprice)
+        // const price = localStorage.setItem('tprice',tprice);
+        alert('Form Submitted Successfully!');
+        
+      } catch (error) {
+        console.error('Form submission failed:', error);
+      }
     // if (submitted) {
     //   const eventDetails = {
     //     organizer,
@@ -81,7 +84,7 @@ return (
             <p className="idoHome">iDoEventZ</p>
             <li className='nav1'><Link to="/">Log Out</Link></li>
             <li className='nav1'><Link to="/Profile">Profile</Link></li>
-            <li className='nav1'><Link to="/Events">Chat With Us</Link></li>
+            {/* <li className='nav1'><Link to="/Events">Chat With Us</Link></li> */}
             <li className='nav1'><Link to="/About">About</Link></li>
             <li className='nav1'><Link to="/Home">Home</Link></li>
           </ul>
@@ -93,6 +96,7 @@ return (
           <Link to="/Attendee"><a href="#">Select Events</a></Link>
           <Link to="/Manage"><a href="#">Manage Events</a></Link>
           <a href="https://calendar.google.com/calendar/r/eventedit">Add to Calender</a>
+          <Link to="/Feedback"><a href="">Feedback</a></Link>
           </div>
           </div>
           <div className='orgform'>

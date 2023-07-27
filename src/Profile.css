@@ -20,3 +20,73 @@
     margin-left: 300px;
     margin-top: -160px;
 }
+.container {
+    max-width: 900px;
+    margin-top: 70px;
+    margin-left: 270px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    margin-bottom: 101px;
+    /* display: flex; */
+  }
+
+  .left-side {
+    flex: 1; /* Occupies 1 part of the container (1/2) */
+    text-align: center; /* To center the profile image */
+  }
+  
+  .profile-image {
+    margin-top:60px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    float: left;
+    object-fit: cover; /* Ensure the image retains its aspect ratio */
+  }
+  
+
+  .right-side {
+    margin-left: 400px;
+    flex: 2; /* Occupies 2 parts of the container (2/2) */
+    padding-left: 20px; /* Add some spacing between the image and details */
+    padding-right: 70px; /* Add some spacing between the image and details */
+  }
+  
+  .container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .container label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .container button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  .container button:hover {
+    background-color: #0056b3;
+  }

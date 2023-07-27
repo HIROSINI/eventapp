@@ -16,6 +16,8 @@ import Terms from './Terms';
 import Faq from './Faq';
 import Update from './Update';
 import Delete from './Delete';
+import Feedback from './Feedback';
+import Attendee1 from './Attendee1';
 // import {Calender} from './Calendar/Calender'
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
         <Route path="/Events" element={<Events/>}></Route>
         <Route path="/Profile" element={<Profile/>}></Route>
         <Route path="/Attendee" element={<Attendee/>}></Route>
+        <Route path="/Attendee1" element={<Attendee1/>}></Route>
         <Route path="/Organizer" element={<Organizer/>}></Route>
         <Route path="/Manage" element={<Manage/>}></Route>
         {/* <Route path="/Calender" element={<Calender/>}></Route> */}
@@ -41,6 +44,8 @@ function App() {
         <Route path="/faq" element={<Faq/>}></Route>
         <Route path="/Update" element={<Update/>}></Route>
         <Route path="/Delete" element={<Delete/>}></Route>
+        <Route path="/Feedback" element={<Feedback/>}></Route>
+
 
 
 

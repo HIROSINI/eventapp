@@ -30,20 +30,29 @@
 }
 .oform1
 {
-    color: darkblue;
     font-size: 17px;
     line-height: 30px;
     font-weight: 600;
-    margin-left: 350px;
-    padding-top: 170px;
+    margin-left: 390px;
+    padding-top: 90px;
 }
 .orgsub1
 {
-    margin-top: 250px;
+
+    margin-top: 120px;
     height: 40px;
     width: 200px;
     font-size: 17px;
     background-color: wheat;
     border-radius: 18px;
-    margin-left: 50px;
+    margin-left: 47px;
+}
+.evdet
+{
+    font-style: italic;
+    text-decoration: underline;
+}
+#numTickets
+{
+    height: 30px;
 }
